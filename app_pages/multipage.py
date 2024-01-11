@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 class MultiPage:
     """
     A class for creating multi-page Streamlit applications.
@@ -35,7 +36,7 @@ class MultiPage:
         Returns:
         None
         """
-        self.pages.append({"title": title, "function": func })
+        self.pages.append({"title": title, "function": func})
 
     def run(self):
         """
@@ -45,5 +46,7 @@ class MultiPage:
         None
         """
         st.title(self.app_name)
-        page = st.sidebar.radio(' McGuineys ', self.pages, format_func=lambda page: page['title'])
+        page = st.sidebar.radio(' McGuineys ',
+                                self.pages,
+                                format_func=lambda page: page['title'])
         page['function']()
