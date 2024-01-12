@@ -52,8 +52,8 @@ Stakeholders proposed the ML solution to study visual differences in leaves, exp
   - Mildew Detection
   - Project Hypothesis
   - ML Performance Metrics
-  
-   ![Sidebar](image.png)
+
+   ![Sidebar](docs/images/image.png)
 
 ## Evaluation
 
