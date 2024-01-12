@@ -23,11 +23,15 @@ def plot_predictions_probabilities(pred_proba, pred_class):
         index={'healthy': 0, 'powdery_mildew': 1}.keys(),
         columns=['Probability']
     )
-    prob_per_class.loc[pred_class] = pred_proba
+    prob_per_class.loc[pred_class] = float(pred_proba)
     for x in prob_per_class.index.to_list():
         if x not in pred_class:
-            prob_per_class.loc[x] = 1 - pred_proba
+            prob_per_class.loc[x] = 1 - float(pred_proba)
     prob_per_class = prob_per_class.round(3)
+
+    prob_per_class['Probability'] = prob_per_class['Probability'].astype(
+        'int64')
+
     prob_per_class['Diagnostic'] = prob_per_class.index
 
     fig = px.bar(
@@ -52,7 +56,12 @@ def resize_input_image(img, version):
     np.ndarray: The resized image as a NumPy array.
     """
     image_shape = load_pkl_file(file_path=f"outputs/{version}/image_shape.pkl")
-    img_info = f"Image Info: Mode={img.mode}, Size={img.size}, Format={img.format}"
+    img_info = (
+        f"Image Info:\n"
+        f"  Mode: {img.mode}\n"
+        f"  Size: {img.size}\n"
+        f"  Format: {img.format}"
+    )
     try:
         img_resized = img.resize((image_shape[1], image_shape[0]))
     except Exception as e:
