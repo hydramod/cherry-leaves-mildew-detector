@@ -52,8 +52,7 @@ def resize_input_image(img, version):
     np.ndarray: The resized image as a NumPy array.
     """
     image_shape = load_pkl_file(file_path=f"outputs/{version}/image_shape.pkl")
-    img_info = f"Image Info: Mode={img.mode}, Size={img.size}, "
-    "Format={img.format}"
+    img_info = f"Image Info: Mode={img.mode}, Size={img.size}, Format={img.format}"
     try:
         img_resized = img.resize((image_shape[1], image_shape[0]))
     except Exception as e:

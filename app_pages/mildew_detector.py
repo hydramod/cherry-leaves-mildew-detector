@@ -35,9 +35,13 @@ def page_mildew_detector_body():
             img_pil = Image.open(image)
             st.info(f"Leaf Sample: **{image.name}**")
             img_array = np.array(img_pil)
-            st.image(img_pil,
-                     caption=f"Image Size: {img_array.shape[1]}px width x "
-                     "{img_array.shape[0]}px height")
+            st.image(
+                img_pil,
+                caption=(
+                    f"Image Size: {img_array.shape[1]}px width "
+                    f"x {img_array.shape[0]}px height"
+                )
+            )
 
             resized_img = resize_input_image(img=img_pil, version='v1')
             pred_proba, pred_class = load_model_and_predict(resized_img,
@@ -54,8 +58,11 @@ def page_mildew_detector_body():
 
     if df_reports:
         df_report = pd.concat(df_reports, ignore_index=True)
-        st.success(f"##### AI is **{100 * pred_proba:.2f}**% certain it is "
-                   "{pred_class}.")
+        st.success(
+            f"##### AI is **{100 * pred_proba:.2f}**% certain "
+            f"it is {pred_class}."
+        )
+
         st.table(df_report)
 
         st.markdown(download_dataframe_as_csv(df_report),
