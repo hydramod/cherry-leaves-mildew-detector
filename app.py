@@ -19,14 +19,14 @@ def main():
     """
     Main function to run the Streamlit app.
     """
-    app = MultiPage(app_name="Farmy & Foods: Cherry leaf mildew detector")
+    app = MultiPage(app_name="🍒Farmy & Foods: Cherry leaf mildew detector🍒")
 
     pages = [
-        ("Project Summary", page_summary_body),
-        ("Leaves Visualizer", page_leaves_visualizer_body),
-        ("Mildew Detection", page_mildew_detector_body),
-        ("Project Hypothesis", page_project_hypothesis_body),
-        ("ML Performance Metrics", page_ml_performance_metrics),
+        ("🗒️📌 Project Summary", page_summary_body),
+        ("🌿🍃🌳 Leaves Visualizer", page_leaves_visualizer_body),
+        ("🕵️‍♂️🍂 Mildew Detection", page_mildew_detector_body),
+        ("🤔💭🔍 Project Hypothesis", page_project_hypothesis_body),
+        ("📊📈📉 ML Performance Metrics", page_ml_performance_metrics),
     ]
 
     add_pages(app, pages)
