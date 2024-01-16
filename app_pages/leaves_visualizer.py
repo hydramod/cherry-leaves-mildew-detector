@@ -13,7 +13,7 @@ def page_leaves_visualizer_body():
     Returns:
     None
     """
-    st.image("/workspace/cherry-leaves-mildew-detector-project-5/app_pages/images/leaves.jpg", use_column_width=True)
+    st.image("images/leaves.jpg", use_column_width=True)
     st.write("### Leaves Visualizer")
     st.info(
         "To observe visual differences or explore Image Montage, "

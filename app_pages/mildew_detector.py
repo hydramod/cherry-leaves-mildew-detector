@@ -22,7 +22,7 @@ def page_mildew_detector_body():
     Returns:
     None
     """
-    st.image("/workspace/cherry-leaves-mildew-detector-project-5/app_pages/images/mildew.jpg", use_column_width=True)
+    st.image("images/mildew.jpg", use_column_width=True)
     
     images_buffer = st.file_uploader('Upload leaf samples. '
                                      'You may select more than one.',

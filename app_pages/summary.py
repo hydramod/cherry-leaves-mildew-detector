@@ -23,7 +23,7 @@ def page_summary_body():
     Returns:
     None
     """
-    st.image("/workspace/cherry-leaves-mildew-detector-project-5/app_pages/images/farmy foods.jpg", use_column_width=True)
+    st.image("images/farmy foods.jpg", use_column_width=True)
 
     st.info("### General info\n"
             "This website incorporates a built-in machine learning system "
