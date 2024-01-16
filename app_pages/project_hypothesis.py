@@ -15,6 +15,8 @@ def page_project_hypothesis_body():
     Returns:
     None
     """
+    st.image("/workspace/cherry-leaves-mildew-detector-project-5/app_pages/images/tree.jpg", use_column_width=True)
+    
     st.write("### Project Hypothesis and Validation")
 
     st.success("* This program is designed to effectively separate leaves "

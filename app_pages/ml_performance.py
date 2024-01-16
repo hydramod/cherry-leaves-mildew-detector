@@ -16,6 +16,8 @@ def page_ml_performance_metrics():
     None
     """
     version = 'v1'
+    
+    st.image("/workspace/cherry-leaves-mildew-detector-project-5/app_pages/images/tree farm.jpg", use_column_width=True)
 
     st.write("### Train, Validation, and Test Set: Labels Frequencies")
 
