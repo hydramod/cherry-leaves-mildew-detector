@@ -61,7 +61,7 @@ The ML model effectively detects mildew in cherry leaves, providing accurate and
 
 ## Deployment
 
-Deployed on Heroku at [Mildew Detection App]().
+Deployed on Heroku at [Mildew Detection App](https://cherry-leaf-mildew-detector-p5-4f29d32136d8.herokuapp.com/).
 
 ## Main Libraries Used
 
