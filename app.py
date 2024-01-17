@@ -22,11 +22,16 @@ def main():
     app = MultiPage(app_name="🍒Farmy & Foods: Cherry leaf mildew detector🍒")
 
     pages = [
-        ("🗒️📌 Project Summary", page_summary_body),
-        ("🌿🍃🌳 Leaves Visualizer", page_leaves_visualizer_body),
-        ("🕵️‍♂️🍂 Mildew Detection", page_mildew_detector_body),
-        ("🤔💭🔍 Project Hypothesis", page_project_hypothesis_body),
-        ("📊📈📉 ML Performance Metrics", page_ml_performance_metrics),
+        ("🗒️📌 Project Summary", 
+            lambda: page_summary_body(app)),
+        ("🌿🍃🌳 Leaves Visualizer",
+            lambda: page_leaves_visualizer_body(app)),
+        ("🕵️‍♂️🍂 Mildew Detection",
+            lambda: page_mildew_detector_body(app)),
+        ("🤔💭🔍 Project Hypothesis",
+            lambda: page_project_hypothesis_body(app)),
+        ("📊📈📉 ML Performance Metrics",
+            lambda: page_ml_performance_metrics(app)),
     ]
 
     add_pages(app, pages)

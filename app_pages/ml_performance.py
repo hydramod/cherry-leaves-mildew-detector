@@ -4,7 +4,7 @@ import pandas as pd
 from src.machine_learning.evaluate_clf import load_test_evaluation
 
 
-def page_ml_performance_metrics():
+def page_ml_performance_metrics(app):
     """
     Display the machine learning model performance metrics.
 
@@ -16,8 +16,8 @@ def page_ml_performance_metrics():
     None
     """
     version = 'v1'
-    
-    st.image("images/tree farm.jpg", use_column_width=True)
+
+    app.load_page_image("ml_metrics.png")
 
     st.write("### Train, Validation, and Test Set: Labels Frequencies")
 

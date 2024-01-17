@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-def page_project_hypothesis_body():
+def page_project_hypothesis_body(app):
     """
     Display the section on Project Hypothesis and Validation.
 
@@ -15,8 +15,8 @@ def page_project_hypothesis_body():
     Returns:
     None
     """
-    st.image("images/tree.jpg", use_column_width=True)
-    
+    app.load_page_image("ml_hypothesis.png")
+
     st.write("### Project Hypothesis and Validation")
 
     st.success("* This program is designed to effectively separate leaves "

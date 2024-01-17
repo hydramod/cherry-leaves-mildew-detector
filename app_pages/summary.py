@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-def page_summary_body():
+def page_summary_body(app):
     """
     Display the summary page body with general info and details about
     requirements and quality.
@@ -23,7 +23,7 @@ def page_summary_body():
     Returns:
     None
     """
-    st.image("images/farmy foods.jpg", use_column_width=True)
+    app.load_page_image("cherry_farm.jpg")
 
     st.info("### General info\n"
             "This website incorporates a built-in machine learning system "

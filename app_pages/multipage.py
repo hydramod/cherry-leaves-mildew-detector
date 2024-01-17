@@ -1,4 +1,5 @@
 import streamlit as st
+from pathlib import Path
 
 
 class MultiPage:
@@ -37,6 +38,11 @@ class MultiPage:
         None
         """
         self.pages.append({"title": title, "function": func})
+
+    def load_page_image(self, image_filename, folder="../images"):
+        current_directory = Path(__file__).parent.resolve()
+        image_path = current_directory / folder / image_filename
+        st.image(f"{image_path}", use_column_width=True)
 
     def run(self):
         """

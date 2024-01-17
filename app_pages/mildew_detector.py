@@ -10,7 +10,7 @@ from src.machine_learning.predictive_analysis import (
 )
 
 
-def page_mildew_detector_body():
+def page_mildew_detector_body(app):
     """
     Page to upload and analyze leaf samples for mildew detection.
 
@@ -22,8 +22,8 @@ def page_mildew_detector_body():
     Returns:
     None
     """
-    st.image("images/mildew.jpg", use_column_width=True)
-    
+    app.load_page_image("mildew.jpg")
+
     images_buffer = st.file_uploader('Upload leaf samples. '
                                      'You may select more than one.',
                                      type=['jpg', 'png'],

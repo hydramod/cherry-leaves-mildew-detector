@@ -6,15 +6,17 @@ import itertools
 import random
 
 
-def page_leaves_visualizer_body():
+def page_leaves_visualizer_body(app):
     """
     Streamlit page for visualizing leaves.
 
     Returns:
     None
     """
-    st.image("images/leaves.jpg", use_column_width=True)
+    app.load_page_image("leaves.jpg")
+
     st.write("### Leaves Visualizer")
+
     st.info(
         "To observe visual differences or explore Image Montage, "
         "click the button below."
