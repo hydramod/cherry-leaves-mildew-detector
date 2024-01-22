@@ -62,11 +62,16 @@ def resize_input_image(img, version):
         f"  Size: {img.size}\n"
         f"  Format: {img.format}"
     )
+
     try:
+        if img.mode != 'RGB':
+            img = img.convert('RGB')
+
         img_resized = img.resize((image_shape[1], image_shape[0]))
     except Exception as e:
         print("Error resizing image:", e)
         raise e
+
     my_image = np.expand_dims(img_resized, axis=0) / 255
 
     return my_image
